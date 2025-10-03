@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:jp_app/src/features/order/orderpage.dart';
+import 'package:jp_app/src/features/shared/j_p_app_background_picture.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -15,11 +17,8 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(
-            child: Image.asset(
-              "lib/assets/hintergründe/bg_startscreen.png",
-              fit: BoxFit.cover,
-            ),
+          JPAppBackgroundPicture(
+            backgroundpicture: "lib/assets/hintergründe/bg_startscreen.png",
           ),
           Align(
             alignment: Alignment.centerRight,
@@ -89,7 +88,13 @@ class _StartPageState extends State<StartPage> {
                             ),
                           ),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => Orderpage(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.transparent,
                               shadowColor: Colors.transparent,
@@ -109,6 +114,3 @@ class _StartPageState extends State<StartPage> {
     );
   }
 }
-
-
-// [Color(0xFFF69EA3), Color(0xFFE970C4)]

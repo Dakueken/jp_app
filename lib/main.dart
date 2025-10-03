@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jp_app/src/features/order/orderpage.dart';
 import 'package:jp_app/src/features/start/startpage.dart';
 
 void main() {
@@ -15,6 +16,6 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: StartPage());
+    return const MaterialApp(home: Orderpage());
   }
 }
