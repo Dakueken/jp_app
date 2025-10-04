@@ -49,7 +49,7 @@ class _JPAppSlantedBoxBuilderState extends State<JPAppSlantedBoxBuilder> {
             top: 270,
             left: 20,
             child: Text(
-              "€ 13.99",
+              "₳ 13.99",
               style: TextStyle(
                 fontFamily: "SanFrancisco",
                 color: Colors.white,

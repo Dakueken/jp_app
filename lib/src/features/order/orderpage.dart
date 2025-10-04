@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/order/j_p_app_slanted_box.dart';
+import 'package:jp_app/src/features/order/categories_button.dart';
 import 'package:jp_app/src/features/order/j_p_app_slanted_box_builder.dart';
+import 'package:jp_app/src/features/order/recommended_container.dart';
 import 'package:jp_app/src/features/shared/j_p_app_background_picture.dart';
 
 class Orderpage extends StatefulWidget {
@@ -40,18 +43,21 @@ class _OrderpageState extends State<Orderpage> {
                     ),
                   ),
                 ),
+                Positioned(top: 160, child: CategoriesButton()),
+                Positioned(top: 100, child: JPAppSlantedBoxBuilder()),
                 Positioned(
-                  top: 160,
-                  child: SizedBox(
-                    height: 50,
-                    width: 200,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text("data"),
+                  top: 550,
+                  child: Text(
+                    "We Recommend",
+                    style: TextStyle(
+                      fontFamily: "SanFrancisco",
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Positioned(top: 100, child: JPAppSlantedBoxBuilder()),
+                Positioned(top: 600, child: RecommendedContainer()),
               ],
             ),
           ),
