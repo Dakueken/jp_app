@@ -7,7 +7,7 @@ class JPAppBackgroundPicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned.fill(
-      child: Image.asset(backgroundpicture, fit: BoxFit.cover),
+      child: Image.asset(backgroundpicture, fit: BoxFit.fill),
     );
   }
 }

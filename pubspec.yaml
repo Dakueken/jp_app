@@ -21,3 +21,16 @@ flutter:
     - lib/assets/hintergründe/
     - lib/assets/grafiken/
     - lib/assets/details/
+  fonts:
+    - family: SanFrancisco
+      fonts: 
+        - asset: lib/assets/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF
+        - asset: lib/assets/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF
+
+        - asset: lib/assets/fonts/sf-pro-display/SFPRODISPLAYLIGHTITALIC.OTF
+          style: italic
+    - family: Inter
+      fonts: 
+        - asset: lib/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf
+        - asset: lib/assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf
+          style: italic
