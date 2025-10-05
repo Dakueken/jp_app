@@ -60,7 +60,7 @@ class _JPAppSlantedBoxBuilderState extends State<JPAppSlantedBoxBuilder> {
             left: 20,
             child: Container(
               height: 45,
-              width: 120,
+              width: 140,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
