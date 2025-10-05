@@ -1,6 +1,5 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/shared/j_p_pink_button.dart';
 import 'package:jp_app/src/features/shared/recommended_items.dart';
 
 class SingleViewBox extends StatelessWidget {
@@ -11,7 +10,6 @@ class SingleViewBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double price = 0;
     return ClipRRect(
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),

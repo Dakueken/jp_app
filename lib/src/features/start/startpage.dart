@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/order/orderpage.dart';
 import 'package:jp_app/src/features/shared/j_p_app_background_picture.dart';
 import 'package:jp_app/src/features/shared/j_p_pink_button.dart';
 

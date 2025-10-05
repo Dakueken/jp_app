@@ -1,9 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/features/shared/recommended_items.dart';
 import 'package:jp_app/src/features/single_view/single_view.dart';
-import 'package:jp_app/src/features/single_view/single_view_box.dart';
 
 class RecommendedContainer extends StatefulWidget {
   const RecommendedContainer({super.key});
