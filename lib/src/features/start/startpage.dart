@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:jp_app/src/features/order/orderpage.dart';
 import 'package:jp_app/src/features/shared/j_p_app_background_picture.dart';
+import 'package:jp_app/src/features/shared/j_p_pink_button.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -61,48 +62,29 @@ class _StartPageState extends State<StartPage> {
                       borderRadius: BorderRadius.all(Radius.circular(25)),
                       color: Colors.grey.withValues(alpha: 0.1),
                     ),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Feeling Snackish Today?",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Text(
-                          "Explore Angi's most popular snack selection and get instantly happy",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        Container(
-                          height: 60,
-                          width: 250,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xFFF69EA3),
-                                spreadRadius: 3,
-                                blurRadius: 20,
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(8),
-                            gradient: LinearGradient(
-                              colors: [Color(0xFFF69EA3), Color(0xFFE970C4)],
-                            ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Feeling Snackish Today?",
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => Orderpage(),
-                                ),
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                            ),
-                            child: Text("Order Now"),
+                          SizedBox(height: 10),
+                          Text(
+                            "Explore Angi's most popular snack selection and get instantly happy",
+                            style: Theme.of(context).textTheme.displayMedium,
+                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          SizedBox(height: 30),
+                          JPPinkButton(
+                            label: "Order Now",
+                            height: 60,
+                            width: 250,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

@@ -13,54 +13,39 @@ class _JPAppSlantedBoxBuilderState extends State<JPAppSlantedBoxBuilder> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 400,
-      height: 600,
       child: Stack(
         children: [
-          Positioned(top: 150, child: JPAppSlantedBox()),
+          JPAppSlantedBox(),
           Positioned(
-            top: 170,
+            top: 20,
             left: 15,
             child: Text(
               "Angi's Yummy Burger",
-              style: TextStyle(
-                fontFamily: "SanFrancisco",
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           Positioned(
-            top: 205,
+            top: 55,
             left: 15,
             child: SizedBox(
               width: 160,
               child: Text(
                 "Delish vegan burger that tastes like heaven",
-                style: TextStyle(
-                  fontFamily: "SanFrancisco",
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
+                style: Theme.of(context).textTheme.displaySmall,
               ),
             ),
           ),
           Positioned(
-            top: 270,
+            top: 120,
             left: 20,
             child: Text(
               "₳ 13.99",
-              style: TextStyle(
-                fontFamily: "SanFrancisco",
-                color: Colors.white,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           Positioned(
-            top: 180,
-            left: 140,
+            bottom: -30,
+            right: -30,
             child: SizedBox(
               height: 260,
               width: 260,
@@ -71,7 +56,7 @@ class _JPAppSlantedBoxBuilderState extends State<JPAppSlantedBoxBuilder> {
             ),
           ),
           Positioned(
-            top: 330,
+            top: 170,
             left: 20,
             child: Container(
               height: 45,
@@ -99,10 +84,8 @@ class _JPAppSlantedBoxBuilderState extends State<JPAppSlantedBoxBuilder> {
                 child: Text(
                   "Add to order",
                   softWrap: false,
-                  style: TextStyle(
-                    fontFamily: "SanFrancisco",
-                    fontSize: 14,
-                    color: Colors.white,
+                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

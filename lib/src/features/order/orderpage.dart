@@ -1,7 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:jp_app/src/features/order/categories_button.dart';
+import 'package:jp_app/src/features/order/all_categories_button.dart';
+import 'package:jp_app/src/features/order/categories_buttons.dart';
 import 'package:jp_app/src/features/order/j_p_app_slanted_box_builder.dart';
 import 'package:jp_app/src/features/order/recommended_container.dart';
 import 'package:jp_app/src/features/shared/j_p_app_background_picture.dart';
@@ -23,41 +22,38 @@ class _OrderpageState extends State<Orderpage> {
             backgroundpicture: "lib/assets/hintergründe/bg_mainscreen.png",
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-            child: Stack(
+            padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Positioned(
-                  top: 75,
-                  child: SizedBox(
-                    width: 300,
-                    child: Text(
-                      "Choose Your Favorite Snack",
-                      softWrap: true,
-                      style: TextStyle(
-                        height: 1,
-                        fontFamily: "Inter",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 28,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                Positioned(top: 160, child: CategoriesButton()),
-                Positioned(top: 100, child: JPAppSlantedBoxBuilder()),
-                Positioned(
-                  top: 550,
+                SizedBox(height: 75),
+                SizedBox(
+                  width: 300,
                   child: Text(
-                    "We Recommend",
-                    style: TextStyle(
-                      fontFamily: "SanFrancisco",
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    "Choose Your Favorite Snack",
+                    softWrap: true,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                Positioned(top: 600, child: RecommendedContainer()),
+                SizedBox(height: 20),
+
+                SizedBox(
+                  height: 55,
+                  width: 400,
+                  child: Row(
+                    spacing: 5,
+                    children: [AllCategoriesButton(), CategoriesButtons()],
+                  ),
+                ),
+                SizedBox(height: 40),
+                JPAppSlantedBoxBuilder(),
+                SizedBox(height: 60),
+                Text(
+                  "We Recommend",
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                SizedBox(height: 10),
+                RecommendedContainer(),
               ],
             ),
           ),
